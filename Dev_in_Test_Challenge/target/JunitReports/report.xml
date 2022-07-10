@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="8" time="111.132">
+    <testcase classname="RESTful API testing on REQRES" name="user POST on register API with valid email and password" time="3.047">
+        <failure message="expected:&lt;200&gt; but was:&lt;503&gt;" type="java.lang.AssertionError"><![CDATA[When user POST 1 valid email and 1 valid password on register...............passed
+Then server response 200 along with token...................................failed
+
+StackTrace:
+java.lang.AssertionError: expected:<200> but was:<503>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at StepDefinitions.RESTfulAPITestsSteps.server_response_200_along_with_token(RESTfulAPITestsSteps.java:51)
+	at ✽.server response 200 along with token(file:///D:/Java/Dev_in_Test_Challenge/src/test/resources/Features/1_RESTfulAPITests.feature:7)
+]]></failure>
+    </testcase>
+    <testcase classname="RESTful API testing on REQRES" name="user POST on register API only with valid email" time="0.23">
+        <failure message="expected:&lt;400&gt; but was:&lt;503&gt;" type="java.lang.AssertionError"><![CDATA[When user POST only 1 valid email on register...............................passed
+Then server response 400 along with an error Get User List..................failed
+
+StackTrace:
+java.lang.AssertionError: expected:<400> but was:<503>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at StepDefinitions.RESTfulAPITestsSteps.server_response_along_with_an_error_get_user_list(RESTfulAPITestsSteps.java:78)
+	at ✽.server response 400 along with an error Get User List(file:///D:/Java/Dev_in_Test_Challenge/src/test/resources/Features/1_RESTfulAPITests.feature:11)
+]]></failure>
+    </testcase>
+    <testcase classname="RESTful API testing on REQRES" name="user GET on users API" time="0.201">
+        <system-out><![CDATA[When user GET on users......................................................passed
+Then server response 200 along with token...................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Test login error message on SwagLabs" name="_2" time="16.055">
+        <system-out><![CDATA[Given browser is open for SwagLabs..........................................passed
+And user is on SwagLabs login page..........................................passed
+When user sign in with no credentilas.......................................passed
+Then Show error message: Epic sadface: Username is required.................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Test login error message on SwagLabs" name="_3" time="16.269">
+        <system-out><![CDATA[Given browser is open for SwagLabs..........................................passed
+And user is on SwagLabs login page..........................................passed
+When user sign in with email and empty password.............................passed
+Then Show error message: Epic sadface: Password is required.................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Test login error message on SwagLabs" name="_4" time="15.904">
+        <system-out><![CDATA[Given browser is open for SwagLabs..........................................passed
+And user is on SwagLabs login page..........................................passed
+When user sign in with password and empty email.............................passed
+Then Show error message: Epic sadface: Username is required.................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Test login error message on SwagLabs" name="_5" time="16.057">
+        <system-out><![CDATA[Given browser is open for SwagLabs..........................................passed
+And user is on SwagLabs login page..........................................passed
+When user sign in with incorrect credentilas................................passed
+Then Show error message: Epic sadface: Username and password do not match any user in this service.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Testing search flow on Expedia" name="Booking multi-flights for 4 people" time="42.988">
+        <failure message="" type="java.lang.AssertionError"><![CDATA[Given browser is open for Expedia...........................................passed
+And user is on Expedia home page............................................passed
+When Home page is loaded....................................................passed
+Then user click Flighs button...............................................passed
+And user click Multi-city button............................................passed
+And user select number of traveler..........................................passed
+And user click Add another flight button....................................passed
+And user edit Flights and search............................................passed
+And user select Flights.....................................................passed
+And user confirm trip details to match the user selections..................failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.fail(Assert.java:96)
+	at StepDefinitions.ExpediaSearchSteps.user_confirm_trip_details_to_match_the_user_selections(ExpediaSearchSteps.java:518)
+	at ✽.user confirm trip details to match the user selections(file:///D:/Java/Dev_in_Test_Challenge/src/test/resources/Features/3_ExpediaSearch.feature:14)
+]]></failure>
+    </testcase>
+</testsuite>
